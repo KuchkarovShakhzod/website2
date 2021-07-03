@@ -1,0 +1,149 @@
+@import 'navbar';
+@import 'media-queries';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.hero {
+    background-color: $light;
+
+    &_container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-left: 100px;
+        padding-top: 50px;
+        padding-bottom: 100px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+
+
+        &_center {
+            width: 60%;
+            margin-right: 100px;
+
+
+            @include tablet {
+                width: 60%;
+            }
+
+
+
+        }
+
+        &_center h1 {
+            font-size: 80px;
+            ;
+
+            @include tablet {
+                font-size: 60px !important;
+            }
+
+
+        }
+
+        &_box {
+            display: grid;
+            align-items: center;
+            justify-items: center;
+            margin: 0 auto;
+            z-index: 1;
+            width: 100%;
+            max-width: 1200px;
+            padding-right: 24px;
+            padding-left: 24px;
+            padding-top: 100px;
+
+
+
+
+
+            &_left {
+                position: absolute;
+                top: 400px;
+                left: 0;
+
+                @include tablet {
+                    display: none;
+
+                }
+            }
+
+            &_middle {
+                display: grid;
+                align-items: center;
+                grid-template-columns: 1fr 1fr;
+                z-index: 1;
+                justify-items: center;
+                margin: 0 auto;
+                padding: 10px;
+
+                @include tablet {
+                    grid-template-columns: 1fr;
+                }
+
+
+                &_text {
+                    font-size: 25px;
+                    width: 80%;
+
+
+                    @include lg {
+                        margin-left: 200px;
+                    }
+
+                }
+
+                &_right {
+                    margin-top: 25px;
+                }
+
+                &_right #button2 {
+                    background-color: $primary;
+                    border-radius: 4px;
+                    padding: 20px 22px;
+                    text-decoration: none;
+                    color: white;
+                    margin-right: 40px;
+                    margin-top: 20px;
+                }
+            }
+
+        }
+
+        &_bottom {
+            display: grid;
+            grid-template-columns: 1fr;
+            z-index: 1;
+            padding-right: 300px;
+
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+
+            &_item {
+
+                display: flex;
+
+
+            }
+
+            &_item .fa-ad {
+                font-size: 60px;
+                margin-right: 5px;
+
+            }
+        }
+
+    }
+
+
+}
